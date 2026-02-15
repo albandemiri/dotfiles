@@ -1,0 +1,23 @@
+@define-color bg rgba(46, 52, 64, 0.9);
+@define-color fg #eceff4;
+@define-color frost #88c0d0; /* Primary Accent */
+@define-color snow #e5e9f0;  /* Secondary Accent */
+@define-color polar #81a1c1; /* Tertiary Status */
+
+#custom-launcher, #workspaces, #mpris, #clock, .modules-right {
+    background: @bg;
+    color: @fg;
+    border-radius: 10px;
+    padding: 0px 15px;
+    margin: 2px 2px;
+    border: 1px solid rgba(136, 192, 208, 0.2);
+}
+
+#custom-launcher, #workspaces button.active { color: @frost; }
+#clock { color: @snow; }
+#mpris { color: @polar; }
+
+#idle_inhibitor, #custom-updates, #temperature, #disk, #cpu, #memory, #backlight, #pulseaudio, #network, #bluetooth, #battery {
+    color: @polar;
+    padding: 0 8px;
+}

@@ -1,0 +1,21 @@
+/* ~/.config/hyprwave/style.css */
+window {
+    background-color: rgba(31, 31, 40, 0.9); /* sumiInk1 with transparency */
+    border: 1px solid rgba(126, 156, 216, 0.2);
+    border-radius: 12px;
+}
+
+label {
+    color: #DCD7BA; /* fujiWhite */
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+.visualizer-bar {
+    background-color: #A98FD2; /* fujiPurple */
+}
+
+/* Match your Waybar's sleek hover effect */
+button:hover {
+    background-color: #A98FD2;
+    color: #1F1F28;
+}

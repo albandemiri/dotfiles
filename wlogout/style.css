@@ -1,0 +1,29 @@
+@define-color wave #7E9CD8;
+@define-color fujiWhite #DCD7BA;
+
+window {
+    background-color: rgba(22, 22, 29, 0.7);
+}
+
+button {
+    color: @fujiWhite;
+    background-color: rgba(31, 31, 40, 0.3);
+    border: none;
+    border-radius: 15px;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:hover {
+    background-color: rgba(126, 156, 216, 0.2);
+    border: 2px solid @wave;
+}
+
+#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
+#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
+#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }

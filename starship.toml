@@ -1,0 +1,58 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Layout: Logo -> Path | Git Status -> Arrow
+format = """
+[ ](fg:#7E9CD8)\
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+add_newline = true
+
+[character]
+# The rounded chevron
+success_symbol = "[ ](bold #7E9CD8)"
+error_symbol = "[ ](bold #EF5350)"
+
+[directory]
+style = "fg:#D8DEE9"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+# Subtle directory icons
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "fg:#81A1C1"
+format = "[on $symbol$branch]($style) "
+
+[git_status]
+style = "fg:#81A1C1"
+# Using technical but clean symbols
+format = '([\[$all_status$ahead_behind\]]($style))'
+conflicted = "="
+ahead = "▲"
+behind = "▼"
+diverged = "◆"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](dimmed #4C566A) "
+
+[python]
+symbol = " "
+format = "via [$symbol($version)]($style) "
+style = "dimmed yellow"
+
+[rust]
+symbol = " "
+format = "via [$symbol($version)]($style) "
+style = "dimmed red"

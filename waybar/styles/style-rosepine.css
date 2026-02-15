@@ -1,0 +1,30 @@
+@define-color bg rgba(25, 23, 36, 0.85);
+@define-color fg #e0def4;
+@define-color iris #c4a7e7;  /* Primary Accent: Launcher & Workspaces */
+@define-color rose #ebbcba;  /* Secondary Accent: Clock */
+@define-color pine #31748f;  /* Tertiary: Status Icons */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 9px;
+    border: none;
+}
+
+#custom-launcher, #workspaces, #mpris, #clock, .modules-right {
+    background: @bg;
+    color: @fg;
+    border-radius: 10px;
+    padding: 0px 15px;
+    margin: 2px 2px;
+    border: 1px solid rgba(196, 167, 231, 0.15);
+}
+
+#custom-launcher, #workspaces button.active { color: @iris; }
+#clock { color: @rose; }
+#mpris { color: @pine; }
+
+/* Unified status bar color to prevent rainbow effect */
+#idle_inhibitor, #custom-updates, #temperature, #disk, #cpu, #memory, #backlight, #pulseaudio, #network, #bluetooth, #battery {
+    color: @pine;
+    padding: 0 8px;
+}

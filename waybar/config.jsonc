@@ -1,0 +1,133 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "margin-top": 2,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 4,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "idle_inhibitor",
+        "custom/updates",
+        "temperature",
+        "disk",
+        "cpu",
+        "memory",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "battery",
+        "custom/power"
+    ],
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "~/.config/rofi/launchers/type-2/launcher.sh", 
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "󰏤 {title} - {artist}",
+        "player-icons": {
+            "default": "󰎆",
+            "spotify": "",
+            "firefox": "󰈹"
+        },
+        "max-length": 30
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M  󰃭 %d %b}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+
+    "custom/updates": {
+        "format": "󰚰 {}",
+        "interval": 3600,
+        "exec": "dnf check-update | grep -c '^[a-z0-9]'",
+        "exec-if": "exit 0",
+        "on-click": "kitty -e sudo dnf upgrade",
+        "signal": 8
+    },
+
+    "temperature":{
+		"hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+		"input-filename": "temp1_input",
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+		"interval": 3,
+		"tooltip": true,
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        }
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/"
+    },
+
+    "cpu": { "format": "󰻠 {usage}%", "interval": 2 },
+    "memory": { "format": "󰍛 {percentage}%", "interval": 2 },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "on-click": "blueman-manager"
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout", 
+        "tooltip": false
+    }
+}

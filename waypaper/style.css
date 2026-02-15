@@ -1,0 +1,48 @@
+/* Main Window */
+window {
+    background-color: #1f1f28; /* Kanagawa Sumi Ink */
+    color: #dcd7ba;
+    border-radius: 12px;
+}
+
+/* Wallpaper Grid */
+flowbox {
+    padding: 15px;
+    background-color: #16161d;
+    border-radius: 10px;
+}
+
+/* Individual Wallpaper Tiles */
+flowboxchild {
+    padding: 5px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+flowboxchild:selected {
+    background-color: #d27e99; /* Sakura Pink highlight */
+    outline: 2px solid #d27e99;
+}
+
+/* Buttons */
+button {
+    background-color: #2a2a37;
+    color: #dcd7ba;
+    border: 1px solid #363646;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #d27e99; /* Sakura Pink hover */
+    color: #1f1f28;
+}
+
+/* Input fields and dropdowns */
+entry, combobox {
+    background-color: #2a2a37;
+    border: 1px solid #363646;
+    border-radius: 6px;
+    color: #dcd7ba;
+}

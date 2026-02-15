@@ -1,0 +1,95 @@
+/* Kanagawa Palette */
+@define-color bg rgba(31, 31, 40, 0.8);
+@define-color fg #DCD7BA;
+@define-color wave #7E9CD8;
+@define-color fujiPurple #A98FD2; 
+@define-color sakuraPink #D27E99; 
+@define-color autumnOrange #C06151;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", sans-serif;
+	font-weight: 600;
+    font-size: 9px;
+    border: none;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Extended Pill Styling */
+#custom-launcher,
+#workspaces,
+#mpris,
+#clock,
+.modules-right {
+    background: @bg;
+    color: @fg;
+    border-radius: 10px;
+    padding: 0px 15px;
+    border: 1px solid rgba(126, 156, 216, 0.12);
+    margin: 2px 2px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+#custom-launcher {
+    color: @fujiPurple;
+    font-size: 13px;
+    padding-right: 15px;
+}
+
+#custom-launcher:hover {
+    background: @fujiPurple;
+    color: @bg;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: @fg;
+}
+
+#workspaces button.active {
+    color: @fujiPurple;
+}
+
+#mpris {
+    color: @wave;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#clock {
+    font-weight: bold;
+    color: @fujiPurple;
+}
+
+/* Accents for Module Icons */
+#idle_inhibitor { color: @sakuraPink; }
+#custom-updates { color: @wave; }
+#temperature { color: @fujiPurple; }
+#disk { color: @fujiPurple; }
+#cpu { color: @wave; }
+#memory { color: @sakuraPink; }
+#backlight { color: @fujiPurple; }
+#network { color: @wave; }
+#pulseaudio { color: @sakuraPink; }
+#bluetooth { color: @fujiPurple; }
+#custom-power { color: @autumnOrange; padding-left: 10px; }
+
+#idle_inhibitor, #custom-updates, #temperature, #disk, #cpu, #memory, #backlight, #pulseaudio, #network, #bluetooth, #battery {
+    padding: 0 8px;
+}
+
+#temperature.critical {
+    color: @autumnOrange;
+}
+
+#network:hover, #bluetooth:hover, #pulseaudio:hover, #custom-power:hover {
+    background: @wave;
+    color: @bg;
+    border-radius: 6px;
+}
+
+#battery.critical {
+    color: #E82424;
+}
