@@ -1,0 +1,27 @@
+/**
+ * Kanagawa Dragon Rofi Theme
+ * Perfectly matched to your Kitty config
+ **/
+
+* {
+    /* Background: Your #1F1F28 with 85% opacity (D9) for Hyprland blur */
+    background:     #1F1F28D9;
+    
+    /* Background-alt: Based on your inactive_tab_background */
+    background-alt: #363644ff;
+    
+    /* Foreground: Your #DDD8BB */
+    foreground:     #DDD8BBff;
+    
+    /* Selected: Your active_tab_background (a nice sleek purple/magenta) */
+    selected:       #614A82ff;
+    
+    /* Active: Your green (color2) */
+    active:         #98BC6Dff;
+    
+    /* Urgent: Your red (color1) */
+    urgent:         #E46A78ff;
+
+    /* Border: Matching your selection_background */
+    border-color:   #49473Eff;
+}
